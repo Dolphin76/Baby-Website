@@ -13,6 +13,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.jpg">
+
 </head>
 <body>
     <div class="header">
@@ -29,16 +32,38 @@
             <li><a href="">Account</a></li>
         </ul>
     </nav>
+    
     <a href="cart.html"><img src="images/5a385f9c87dd16.0608795915136439325565.png" alt="Cart" width="30px" height="30px"></a>
+    
+    <button type="button" onmouseover="document.getElementById('img1').src='change.jfif'" onmouseout="document.getElementById('img1').src='images/400148800653_18554.jpg'">Change Cover Image.</button>
+    
     </div>
     <div class="row">
         <div class="col-2">
             <h1>Buy for Babies</h1>
             <p>The Cutest and the Safest Baby Products in the whole wide world.</br> Crafted with Love, for your Little Angels</p>
-            <a href="divya.html" class="btn">Explore Now</a>
+            <a href="divya.html" class="btn">Explore Now</a> <br>
+            
+            <button onclick="myFunction()">Change Theme</button>
+
+            <p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Switch to the Dark Theme?")) {
+    txt = "Dark Theme is unavailable at the moment.";
+  } else {
+    txt = "";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
         </div>
         <div class="col-2">
-           <img src="images/400148800653_18554.jpg" width="500px">
+           <img id="img1" src="images/400148800653_18554.jpg" width="500px">
            
     </div>
 </div>
@@ -176,13 +201,15 @@
     <div class="small-container">
         <div class="row">
             <div class="col-6">
-                <img src="images/baby Carriers/5.jpg" class="offer-img">
+                <img id="carh" src="images/baby Carriers/5.jpg" class="offer-img" width="300px">
             </div>
             <div class="col-6">
                 <p>Exclusievely Available in Buy for Babies</p>
                 <h1>BFB Baby Carrier</h1>
                 <small>Love your toddler so much, that u have to carry him/her everywhere?</small>
-            </br><a href="cart.html" class="btn">Buy Now &#8594;</a>
+            </br>
+            <button type="button" onclick="document.getElementById('carh').src='car2.webp'"; ondblclick="document.getElementById('carh').src='cart1.jpg'">View in different colours</button> <br>
+            <a href="cart.html" class="btn">Buy Now &#8594;</a>
             </div>
             </div>
             </div>
